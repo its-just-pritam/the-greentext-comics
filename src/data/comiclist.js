@@ -6,16 +6,16 @@ export const comicVars = [
     {
       name: "Comic 1",
       image: c1,
-      desc: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      desc: "Description",
     },
     {
       name: "Comic 2",
       image: c2,
-      desc: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      desc: "Description",
     },
     {
       name: "Comic 3",
       image: c3,
-      desc: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      desc: "Description",
     }
 ];

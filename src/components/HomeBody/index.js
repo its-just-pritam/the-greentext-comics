@@ -9,21 +9,27 @@ import Grid from '@mui/material/Grid';
 import { comicVars } from '../../data/comiclist';
 
 const mystyle = {
-  padding: "50px 0 50px 0"
+  padding: "50px 0 50px 0",
+};
+
+const topBarStyle = {
+  backgroundImage: `url(${top_bar})`,
+  height: '700px'
 };
 
 export default function HomeBody() {
 
   const [spacing, setSpacing] = React.useState(2);
+  const cardWidth = ( window.innerWidth > 400 )? 240 : 150
 
   function showCards(item, index) {
     return (
       <Grid key={index} item>
-          <Card sx={{ maxWidth: 360 }}>
+          <Card sx={{ maxWidth: cardWidth }}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="360"
+              height={cardWidth}
               image={item.image}
             />
             <CardContent>
@@ -37,7 +43,7 @@ export default function HomeBody() {
           </CardActionArea>
           <CardActions>
             <Button size="small" color="primary">
-              SHARE
+              READ FULL COMIC
             </Button>
           </CardActions>
         </Card>
@@ -47,7 +53,8 @@ export default function HomeBody() {
 
   return (
     <div>
-      <img src={top_bar} alt='Top Bar'/>
+      <div style={topBarStyle} ></div>
+      {/* <img src={top_bar} alt='Top Bar'/> */}
       <div style={mystyle}>
         <Grid sx={{ flexGrow: 1 }} container spacing={5}>
           <Grid item xs={12}>

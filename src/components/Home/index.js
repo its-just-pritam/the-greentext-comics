@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import GTClogo from '../../home/images/GTC.png';
 
 const menu = [
     {
@@ -17,7 +18,7 @@ const menu = [
     },
     {
         name: 'Tumblr',
-        link: 'https://www.instagram.com/_towlschii_/'
+        link: 'https://thegreentextcomics.tumblr.com/'
     },
     {
         name: 'Patreon',
@@ -30,20 +31,36 @@ const mystyle = {
 };
 
 function appBarLabel(label) {
+
+    if( window.innerWidth < 400 )
     return (
-      <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-        </IconButton>
-        <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-          {label}
-        </Typography>
-        {menu.map((page) => (
-            <div style={{margin: "0 10px 0 10px"}}>
-                <a href={page.link} target="_blank" style={mystyle}>{page.name}</a>
-            </div>
-            ))}
-      </Toolbar>
-    );
+        <Toolbar>
+            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                <img src={GTClogo} alt='GTC logo' height='25px' />
+            </IconButton>
+            {menu.map((page) => (
+                <div style={{margin: "0 10px 0 10px"}}>
+                    <a href={page.link} target="_blank" style={mystyle}>{page.name}</a>
+                </div>
+                ))}
+        </Toolbar>
+        );
+    else
+        return (
+        <Toolbar>
+            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                <img src={GTClogo} alt='GTC logo' height='30px' />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+            {label}
+            </Typography>
+            {menu.map((page) => (
+                <div style={{margin: "0 10px 0 10px"}}>
+                    <a href={page.link} target="_blank" style={mystyle}>{page.name}</a>
+                </div>
+                ))}
+        </Toolbar>
+        );
   }
   
   const darkTheme = createTheme({
@@ -64,10 +81,11 @@ export default function Home({...restProps}) {
                         {appBarLabel('THE GREENTEXT COMICS')}
                     </AppBar>
                 </ThemeProvider>
-            </Stack><div style={{ backgroundColor: 'black' }}>
-            <Container>
-                <HomeBody />
-            </Container>
+            </Stack>
+            <div style={{ backgroundColor: 'black' }}>
+                <Container>
+                    <HomeBody />
+                </Container>
             </div>
         </>
     );
