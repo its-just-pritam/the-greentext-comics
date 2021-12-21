@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/the-greentext-comics/static/css/main.073c9b0a.css",
-    "main.js": "/the-greentext-comics/static/js/main.85861305.js",
+    "main.js": "/the-greentext-comics/static/js/main.27789447.js",
     "static/js/787.8eb1e608.chunk.js": "/the-greentext-comics/static/js/787.8eb1e608.chunk.js",
     "static/media/top_bar.png": "/the-greentext-comics/static/media/top_bar.73ffe1991bcd4da75c96.png",
     "static/media/c3.png": "/the-greentext-comics/static/media/c3.62d954e77ccbe8047cf5.png",
@@ -9,11 +9,11 @@
     "static/media/c1.png": "/the-greentext-comics/static/media/c1.b0c39beb7f3b5d69b589.png",
     "index.html": "/the-greentext-comics/index.html",
     "main.073c9b0a.css.map": "/the-greentext-comics/static/css/main.073c9b0a.css.map",
-    "main.85861305.js.map": "/the-greentext-comics/static/js/main.85861305.js.map",
+    "main.27789447.js.map": "/the-greentext-comics/static/js/main.27789447.js.map",
     "787.8eb1e608.chunk.js.map": "/the-greentext-comics/static/js/787.8eb1e608.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.85861305.js"
+    "static/js/main.27789447.js"
   ]
 }
