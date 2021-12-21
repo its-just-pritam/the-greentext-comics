@@ -7,11 +7,11 @@ import Pages from './components/Pages';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
 		<Routes>
-			<Route path={ROUTES.HOME} element={<Home/>} />
-			<Route path={ROUTES.COMIC} element={<Comic/>} />
-			<Route path={ROUTES.PAGES} element={<Pages/>} />
+			<Route exact path={ROUTES.HOME} element={<Home/>} />
+			<Route exact path={ROUTES.COMIC} element={<Comic/>} />
+			<Route exact path={ROUTES.PAGES} element={<Pages/>} />
 		</Routes>
     </HashRouter>
   );
