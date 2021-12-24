@@ -12,15 +12,18 @@ const mystyle = {
   padding: "50px 0 50px 0",
 };
 
-const topBarStyle = {
+const topBarStyle = ( window.innerWidth > 600 )? {
   backgroundImage: `url(${top_bar})`,
   height: '700px'
+} : {
+  height: 0
 };
 
 export default function HomeBody() {
 
+  // eslint-disable-next-line
   const [spacing, setSpacing] = React.useState(2);
-  const cardWidth = ( window.innerWidth > 400 )? 240 : 150
+  const cardWidth = ( window.innerWidth > 600 )? 240 : 150
 
   function showCards(item, index) {
     return (
@@ -54,7 +57,6 @@ export default function HomeBody() {
   return (
     <div>
       <div style={topBarStyle} ></div>
-      {/* <img src={top_bar} alt='Top Bar'/> */}
       <div style={mystyle}>
         <Grid sx={{ flexGrow: 1 }} container spacing={5}>
           <Grid item xs={12}>

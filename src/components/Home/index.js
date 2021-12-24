@@ -7,8 +7,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import GTClogo from '../../home/images/GTC.png';
 
 const menu = [
@@ -22,7 +20,7 @@ const menu = [
     },
     {
         name: 'Patreon',
-        link: 'https://www.instagram.com/_towlschii_/'
+        link: 'https://www.patreon.com/towlschii'
     },
 ];
 const mystyle = {
@@ -32,7 +30,7 @@ const mystyle = {
 
 function appBarLabel(label) {
 
-    if( window.innerWidth < 400 )
+    if( window.innerWidth < 600 )
     return (
         <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
@@ -40,7 +38,7 @@ function appBarLabel(label) {
             </IconButton>
             {menu.map((page) => (
                 <div style={{margin: "0 10px 0 10px"}}>
-                    <a href={page.link} target="_blank" style={mystyle}>{page.name}</a>
+                    <a href={page.link} rel="noreferrer" target="_blank" style={mystyle}>{page.name}</a>
                 </div>
                 ))}
         </Toolbar>
@@ -56,7 +54,7 @@ function appBarLabel(label) {
             </Typography>
             {menu.map((page) => (
                 <div style={{margin: "0 10px 0 10px"}}>
-                    <a href={page.link} target="_blank" style={mystyle}>{page.name}</a>
+                    <a href={page.link} rel="noreferrer" target="_blank" style={mystyle}>{page.name}</a>
                 </div>
                 ))}
         </Toolbar>
